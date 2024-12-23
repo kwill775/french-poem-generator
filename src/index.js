@@ -12,9 +12,9 @@ function generatePoem(event) {
 
   let topicInput = document.querySelector("#user-topic");
   let apiKey = "3tb400c941f2a4edo23f9347ffbbacfd";
-  let prompt = `Topic: Genetate a French poem about ${topicInput}`;
   let context =
-    "You have an extensive knowledge of poems and love to write short poems. Please use the topic provided to you to generate a poem. Your mission is to generate a 4 line poem and separate each line with <br />. ";
+    "You are a romantic poem expert and love to write short poems. Your mission is to generate a 4 line poem and separate each line with <br />. Make sure to follow the user instructions.";
+  let prompt = `User instructions: Genetate a French poem about ${topicInput}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let poemElement = document.querySelector("#poem");
